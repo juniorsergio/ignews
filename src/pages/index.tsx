@@ -1,4 +1,4 @@
-import Head from '../../node_modules/next/head'
+import Head from 'next/head'
 import { GetStaticProps } from 'next'
 
 import { SubscribeButton } from '../components/SubscribeButton'
