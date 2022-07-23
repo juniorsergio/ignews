@@ -28,7 +28,7 @@ export default function Post({ post }: PostProps){
                 <article className={styles.post}>
                     <h1>{post.title}</h1>
                     <time>{post.updatedAt}</time>
-                    <Markup className={styles.postContent} content={post.content} />
+                    <Markup tagName='div' className={styles.postContent} content={post.content} />
                 </article>
             </main>
         </>
@@ -39,9 +39,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     const session = await getSession({ req })
     const { slug } = params
 
-    /* if (!session){
-
-    } */
+    if (!session?.activeSubscription) {
+        return {
+            redirect: {
+                destination: `/posts/preview/${slug}`,
+                permanent: false
+            }
+        }
+    }
 
     const prismic = getPrismicClient(req)
     const response = await prismic.getByUID('post', String(slug), {})
