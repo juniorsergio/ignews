@@ -1,0 +1,26 @@
+{
+  "id": "85597db6-c758-43ec-8ddf-b43099a79923",
+  "uid": "adipisci-autem-libero",
+  "type": "post",
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Envisioneer distributed e-markets",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "heading1",
+        "text": "Harness leading-edge channels",
+        "spans": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Consequat adipisicing velit nulla Lorem excepteur ipsum. Minim laboris ex anim ipsum nulla deserunt ipsum excepteur cillum aliqua cillum consectetur ut est duis.",
+        "spans": []
+      }
+    ]
+  }
+}
